@@ -35,16 +35,141 @@
       <li class="nav-item">
         <a class="nav-link" href="3dprint.html">3D Print</a>
 		
+		<li class="nav-item">
+        <a class="nav-link" href="codeart.html">Code Art</a>
       </li>
     </ul>
   </div>
 
 </nav>
 <h1 class="text-center">P5.js Self Portrait</h1>
-<iframe src="portrait/index.html" style="height:600px;width:600px; center" title="Iframe Example"></iframe>
-<p>Here is a self portrait I made using code. 
+<p style=text-center>For this project is used P5.js. to create a self portrait.</p>
 <br>
-<img class="img-fluid mx-auto d-block"  src="portrait/codeartportrait.jpg" alt="jake 3d print"style="width:600px;height:600px;">
+<br>
+<img class="img-fluid mx-auto d-block"  src="portrait/codeartportrait.jpg" alt="code art portrait"style="width:600px;height:600px;">
+<p>Here is the code I used to make my portrait.</p>
+<p> 
+<html><body><pre>
+<span style="color: #33997E;">function</span> <span style="color: #006699;"><b>setup</b></span>() {
+&nbsp;&nbsp;createCanvas(600,&nbsp;600);
+}
+<span style="color: #33997E;">function</span> <span style="color: #006699;"><b>draw</b></span>() {
+&nbsp;&nbsp;&nbsp;<span style="color: #006699;">background</span>(170,214,255);  
+&nbsp;&nbsp;;
+&nbsp;&nbsp;<span style="color: #006699;">fill</span>(221,218,218);
+&nbsp;&nbsp;<span style="color: #006699;">strokeWeight</span>(1);
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #666666;">//ground</span>
+&nbsp;&nbsp;<span style="color: #006699;">fill</span>(44,45,45);
+&nbsp;&nbsp;<span style="color: #006699;">rect</span>(0,300, 610,300);<span style="color: #666666;">//horizon line</span>
+&nbsp;&nbsp;<span style="color: #006699;">fill</span>(174,186,183);
+&nbsp;<span style="color: #006699;">triangle</span>(0,300,200,300,0,600);<span style="color: #666666;">//left side walk</span>
+&nbsp;<span style="color: #006699;">triangle</span>(600,300,400,300,600,600);<span style="color: #666666;">//right side walk</span>
+&nbsp;<span style="color: #006699;">fill</span>(50,167,81);
+&nbsp;<span style="color: #006699;">triangle</span>(0,300,150,300,0,445);<span style="color: #666666;">//left grass</span>
+&nbsp;<span style="color: #006699;">triangle</span>(600,300,450,300,600,445);<span style="color: #666666;">//right grass</span>
+&nbsp;
+&nbsp;<span style="color: #666666;">//creepy figure</span>
+&nbsp;<span style="color: #006699;">fill</span>(36);
+&nbsp;<span style="color: #006699;">triangle</span>(70,106,115,135,70,200);
+&nbsp;<span style="color: #006699;">fill</span>(336,0,0);
+&nbsp;<span style="color: #006699;">ellipse</span>(77,140,10,10);<span style="color: #666666;">//left eye</span>
+&nbsp;<span style="color: #006699;">ellipse</span>(93,150,10,10)<span style="color: #666666;">//right eye</span>
+&nbsp;<span style="color: #006699;">fill</span>(0);
+&nbsp;<span style="color: #006699;">ellipse</span>(93,150,5,5)<span style="color: #666666;">//pupil</span>
+&nbsp;<span style="color: #006699;">fill</span>(255);
+&nbsp;<span style="color: #006699;">triangle</span>(78,160,92,160,78,170);<span style="color: #666666;">//smile</span>
+&nbsp;
+&nbsp;<span style="color: #666666;">//tree</span>
+&nbsp;<span style="color: #006699;">fill</span>(99,74,52)
+&nbsp;&nbsp;<span style="color: #006699;">rect</span>(0,150,40,200)<span style="color: #666666;">//stump</span>
+&nbsp;&nbsp;<span style="color: #006699;">fill</span>(43,88,49);
+&nbsp;&nbsp;&nbsp;<span style="color: #006699;">rect</span>(0,80,80,230);<span style="color: #666666;">//bush</span>
+&nbsp;&nbsp;<span style="color: #666666;">//back hair</span>
+&nbsp;&nbsp;<span style="color: #006699;">fill</span>(0,0,0);
+&nbsp;&nbsp;<span style="color: #006699;">arc</span>(300, 390, 340, 700, <span style="color: #006699;">radians</span>(180), <span style="color: #006699;">radians</span>(0));
+&nbsp;<span style="color: #666666;">// body</span>
+&nbsp;<span style="color: #006699;">fill</span>(255);
+&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(300,520,248,400);
+&nbsp;&nbsp;<span style="color: #006699;">fill</span>(246,226,212);
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;<span style="color: #666666;">//hand</span>
+&nbsp;&nbsp;&nbsp;<span style="color: #006699;">strokeWeight</span>(1.5);
+&nbsp;&nbsp;&nbsp;<span style="color: #006699;">fill</span>(0);
+&nbsp;<span style="color: #006699;">rect</span>(79,187,2,10);<span style="color: #666666;">//hand</span>
+&nbsp;<span style="color: #006699;">line</span>(80,190,70,180);<span style="color: #666666;">//topfinger</span>
+&nbsp;<span style="color: #006699;">line</span>(80,192,68,186);<span style="color: #666666;">//2nd</span>
+&nbsp;<span style="color: #006699;">line</span>(80,194,68,189);<span style="color: #666666;">//3rd</span>
+&nbsp;<span style="color: #006699;">line</span>(80,197,69,193);<span style="color: #666666;">//3rd</span>
+&nbsp;<span style="color: #006699;">line</span>(80,187,76,180);<span style="color: #666666;">//3rd</span>
+&nbsp;
+&nbsp;&nbsp;<span style="color: #666666;">//shoulder</span>
+&nbsp;&nbsp;<span style="color: #006699;">strokeWeight</span>(1);
+&nbsp;&nbsp;<span style="color: #006699;">fill</span>(92);
+&nbsp;&nbsp;<span style="color: #006699;">arc</span>(229,630, 120,550,<span style="color: #006699;">radians</span>(180),<span style="color: #006699;">radians</span>(270));<span style="color: #666666;">//left shoulder</span>
+&nbsp;&nbsp;<span style="color: #006699;">arc</span>(373, 630, 120, 550,<span style="color: #006699;">radians</span>(270),<span style="color: #006699;">radians</span>(0));<span style="color: #666666;">//right</span>
+&nbsp;&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #666666;">//neck</span>
+&nbsp;&nbsp;<span style="color: #006699;">fill</span>(246,226,212);
+&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(300,340,50,50);
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #666666;">//jacket</span>
+&nbsp;&nbsp;<span style="color: #006699;">fill</span>(92);
+&nbsp;&nbsp;<span style="color: #006699;">rect</span>(220, 350, 60, 500);<span style="color: #666666;">//left</span>
+&nbsp;&nbsp;<span style="color: #006699;">rect</span>(320, 350, 60, 500);<span style="color: #666666;">//right</span>
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #666666;">//pocket</span>
+&nbsp;&nbsp;&nbsp;<span style="color: #006699;">rect</span>(335,400,35,45);<span style="color: #666666;">//right</span>
+&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">//hoodie</span>
+&nbsp;&nbsp;<span style="color: #006699;">fill</span>(92);
+&nbsp;&nbsp;<span style="color: #006699;">triangle</span>(220,350,280,320,280, 450);<span style="color: #666666;">//left</span>
+&nbsp;&nbsp;<span style="color: #006699;">triangle</span>(320,320,380,350,320, 450);<span style="color: #666666;">//right</span>
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #666666;">//ears</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">fill</span>(246,226,212);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(180,220,40,50);<span style="color: #666666;">//left ear</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(420,220,40,50);<span style="color: #666666;">//right ear</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;<span style="color: #666666;">//head</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">fill</span>(246,226,212);
+&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(300,200,235,260);
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #666666;">//nose</span>
+&nbsp;&nbsp;<span style="color: #006699;">ellipse</span>(298,250,40,20);
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #666666;">//smile</span>
+&nbsp;&nbsp;<span style="color: #006699;">line</span>(255,270,300,300);<span style="color: #666666;">//left smile</span>
+&nbsp;&nbsp;<span style="color: #006699;">line</span>(300,300,347,270);<span style="color: #666666;">//right smile</span>
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #666666;">//glasses</span>
+&nbsp;&nbsp;<span style="color: #006699;">fill</span>(255,255,255);
+<span style="color: #006699;">rect</span>(210,182,60,50);<span style="color: #666666;">//left eye glass</span>
+<span style="color: #006699;">rect</span>(325,182,60,50);<span style="color: #666666;">//right eye glass</span>
+<span style="color: #006699;">line</span>(270,210,325,210);<span style="color: #666666;">//glass bridge</span>
+
+&nbsp;<span style="color: #666666;">//eyes</span>
+&nbsp;&nbsp;<span style="color: #006699;">fill</span>(0,0,0);
+<span style="color: #006699;">ellipse</span>(220,221,20,20);<span style="color: #666666;">//left eye</span>
+<span style="color: #006699;">ellipse</span>(335,221,20,20);<span style="color: #666666;">//right eye</span>
+
+<span style="color: #666666;">//eyebrows</span>
+<span style="color: #006699;">fill</span>(0);
+<span style="color: #006699;">strokeWeight</span>(4);
+<span style="color: #006699;">line</span>(210,156,268,150);<span style="color: #666666;">//left eyebrow</span>
+<span style="color: #006699;">line</span>(320,150,373,170);<span style="color: #666666;">//left eyebrow</span>
+&nbsp;&nbsp;
+&nbsp;&nbsp;<span style="color: #666666;">//bangs</span>
+&nbsp;&nbsp;<span style="color: #006699;">fill</span>(0);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">triangle</span>(370,80, 239,65, 161, 200);<span style="color: #666666;">//Left bang</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #006699;">triangle</span>(359,68, 300,68, 435, 195);<span style="color: #666666;">//right bang</span>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}
+
+</pre></body></html>
+</p>
 </div>
 </body>
 </html>
