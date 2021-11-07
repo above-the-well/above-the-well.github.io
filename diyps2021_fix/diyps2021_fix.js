@@ -7,6 +7,7 @@ function preload() {
 // preload() runs once, it may make you wait
   img = loadImage('ocean1.jpg');  // cat.jpg needs to be next to this .js file
   img2 = loadImage('ocean2.jpg');
+  img3=loadImage('sky.jpg');
 // you can link to an image on your github account
 // img = loadImage('https://dma-git.github.io/images/74.png');
 }
@@ -31,57 +32,68 @@ function newkeyChoice(toolChoice) { //toolchoice is the key that was pressed
   // just make sure each key option has the a stroke or fill and then what type of 
   // graphic function
 
- if (toolChoice == '1' ) {  // first tool
+ if (toolChoice == '1' ) {  // first tool, black line
    
-    stroke(01);
-   
-    ellipse(mouseX, mouseY, 10, 10);
+  strokeWeight(1);
+    stroke('#000000');
      line(mouseX, mouseY, pmouseX, pmouseY);
     
-  } else if (toolChoice == '2') { // second tool
+  } else if (toolChoice == '2') { // second tool,white transparent small
 
-    stroke(20);
-    line(mouseX, mouseY, pmouseX, pmouseY);
-  } else if (toolChoice == '3') { // third tool
+       fill(255,20);
+    stroke(0, 0);
+    ellipse(mouseX, mouseY,30,30);
+  } else if (toolChoice == '3') { // third tool, blue whale tail
 
-    stroke(300, 100, 0, 80);
-    line(mouseX, mouseY, pmouseX, pmouseY);
-  } else if (toolChoice == '4') {
-
-    stroke(0, 0, 255);
-    line(mouseX, mouseY, pmouseX, pmouseY);
-  } else if (key == '5') { // this tool calls a function
-    stroke(0, 0, 255);
-    testbox(20, 20, 200);
-    testbox(200, 20, 20);
+        fill(56,58,96);
+    stroke(0, 0);
+    ellipse(mouseX, mouseY,10,10);
+  } else if (toolChoice == '4') {//fourth ,sky blue ellipse
+    
+     fill(148,208,251);
+    stroke(0, 0);
+    ellipse(mouseX, mouseY,100,100);
+  } else if (toolChoice == '5') { //fifth tool,white ellipe large
+    
+     fill(243,10);
+    stroke(0, 0);
+    ellipse(mouseX, mouseY, 40,40);
     
  // make testbox do something!
  //   line(mouseX, mouseY, pmouseX, pmouseY);
-  } else if (toolChoice == '6') {
+  } else if (toolChoice == '6') {//sixth tool, yellow
+   fill(231,236,101);
+    stroke(0, 0);
+    ellipse(mouseX, mouseY,50,50);
+ 
+  } else if (toolChoice == '7') {//seventh tool, light blue whale
 
-    stroke(200);
-    line(mouseX, mouseY, pmouseX, pmouseY);
-  } else if (toolChoice == '7') {
+  fill(133,134,158);
+    stroke(0, 0);
+    ellipse(mouseX, mouseY,10,10);
+ 
+  } else if (toolChoice == '8') {//eight tool, blue larger
 
-    fill(100, 200, 100);
-    rect(mouseX, mouseY, 20, 20);
-  } else if (toolChoice == '8') {
+  fill(56,58,96);
+    stroke(0, 0);
+    ellipse(mouseX, mouseY,30,30);
+  } else if (toolChoice == '9') {//ninth tool, blue water spray
 
-    fill(300, 100, 0, 80);
-    rect(mouseX, mouseY, 20, 20);
-  } else if (toolChoice == '9') {
-
-    fill(300, 100, 0, 80);
-    rect(mouseX, mouseY, 40, 40);
+    fill(29,149,188);
+      stroke(0, 0);
+    ellipse(mouseX, mouseY,10,10);
   } else if (toolChoice == '0') {
     stroke(0, 0);
     fill(random(255), random(255), random(255), random(255));
     rect(mouseX, mouseY, 200, 150);
   } else if (toolChoice == 'g' || toolChoice == 'G') { // g places the image we pre-loaded
     image(img, mouseX-25, mouseY-25, 50, 50);
-     } else if (toolChoice == 'r' || toolChoice == 'R') { // g places the image we pre-loaded
+      } else if (toolChoice == 's' || toolChoice == 'S') { // g places the image we pre-loaded
     image(img2, mouseX-25, mouseY-25, 50, 50);
-  }
+    } else if (toolChoice == 'r' || toolChoice == 'R') { // g places the image we pre-loaded
+    image(img3, mouseX-25, mouseY-25, 50, 50);
+    }
+     
  }
  
 function testbox(r, g, b) {
