@@ -5,9 +5,9 @@ var screenbg = 240; // off white background
 
 function preload() {
 // preload() runs once, it may make you wait
-  img = loadImage('ocean1.jpg');  // cat.jpg needs to be next to this .js file
-  img2 = loadImage('ocean2.jpg');
-  img3=loadImage('sky.jpg');
+  img = loadImage('https://dma-git.gitub.io/images/ocean1.jpg');  // cat.jpg needs to be next to this .js file
+  img2 = loadImage('https://dma-git.gitub.io/images/ocean2.jpg');
+  img3=loadImage('https://dma-git.gitub.io/images/sky.jpg');
 // you can link to an image on your github account
 // img = loadImage('https://dma-git.github.io/images/74.png');
 }
